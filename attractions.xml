@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TouristAttractions>
+    <Attraction>
+        <Name>Petronas Twin Towers</Name>
+        <City>Kuala Lumpur</City>
+        <State>Kuala Lumpur</State>
+        <Category>Urban Landmark, Entertainment</Category>
+        <Description>Iconic twin skyscrapers with a skybridge and observation deck.</Description>
+        <OpeningHours>
+            <Day>Monday-Friday</Day>
+            <Time>9:00 AM - 9:00 PM</Time>
+        </OpeningHours>
+        <OpeningHours>
+          <Day>Weekend</Day>
+          <Time>Closed</Time>
+        </OpeningHours>
+        <Image>petronas.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <Name>Batu Caves</Name>
+        <City>Gombak</City>
+        <State>Selangor</State>
+        <Category>Religious, Cultural</Category>
+        <Description>Limestone hill with temples and Hindu shrines.</Description>
+        <OpeningHours>
+            <Day>Daily</Day>
+            <Time>6:00 AM - 9:00 PM</Time>
+        </OpeningHours>
+        <Image>batu_caves.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <Name>Cameron Highlands</Name>
+        <City>Cameron Highlands</City>
+        <State>Pahang</State>
+        <Category>Nature, Recreational</Category>
+        <Description>Hill station known for tea plantations and cool climate.</Description>
+        <OpeningHours>
+            <Day>Daily</Day>
+            <Time>24 Hours</Time>
+        </OpeningHours>
+        <Image>cameron_highlands.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <Name>Fort Cornwallis</Name>
+        <City>George Town</City>
+        <State>Penang</State>
+        <Category>Historical</Category>
+        <Description>Star fort built by the British East India Company.</Description>
+        <OpeningHours>
+            <Day>Daily</Day>
+            <Time>9:00 AM - 10:00 PM</Time>
+        </OpeningHours>
+        <Image>fort_cornwallis.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <Name>Kinabalu National Park</Name>
+        <City>Ranau</City>
+        <State>Sabah</State>
+        <Category>Nature, Adventure</Category>
+        <Description>Home to Mount Kinabalu, a UNESCO World Heritage Site.</Description>
+        <OpeningHours>
+          <Day>Daily</Day>
+          <Time>24 Hours</Time>
+        </OpeningHours>
+        <Image>kinabalu.jpg</Image>
+    </Attraction>
+    <Attraction>
+      <Name>Jonker Street</Name>
+      <City>Melaka</City>
+      <State>Melaka</State>
+      <Category>Cultural, Entertainment</Category>
+      <Description>Historic street known for antique shops and night market.</Description>
+      <OpeningHours>
+        <Day>Friday-Sunday</Day>
+        <Time>6:00 PM - 12:00 AM</Time>
+      </OpeningHours>
+      <OpeningHours>
+          <Day>Monday-Thursday</Day>
+          <Time>10:00 AM - 6:00 PM</Time>
+      </OpeningHours>
+      <Image>jonker.jpg</Image>
+    </Attraction>
+</TouristAttractions>
