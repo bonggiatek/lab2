@@ -1,42 +1,182 @@
-/* style.css */
+/* General Styles */
 body {
-    font-family: sans-serif;
-    padding: 20px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth theme transitions */
-}
-
-.light-theme {
-    background-color: #f8f8f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-.dark-theme {
-    background-color: #333;
-    color: #f8f8f8;
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
 }
 
-.attraction {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+h1, h2 {
+    margin: 0.5rem 0;
 }
 
-.attraction-image img {
-    max-width: 100%; /* Responsive image size */
-    height: auto;
-    max-height: 200px; /*added max height so images wont become too large*/
-    object-fit: contain; /*Preserves aspect ratio and fits image within container*/
+.view-controls, .group-controls {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.attraction-name {
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.view-container {
+    background-color: white;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 1200px;
+}
+
+/* Attraction List Styles */
+.attraction-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.attraction-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.attraction-card.simple {
+    text-align: center;
+    padding: 0.5rem;
+    width: 200px;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.attraction-card.simple img {
+    height: 120px;
+}
+
+.attraction-card h3 {
+    margin-top: 0.5rem;
+    color: #2c3e50;
+}
+
+.attraction-card p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.price {
     font-weight: bold;
-    font-size: 1.2em;
+    color: #27ae60;
 }
 
-#navigation {
-    margin-top: 20px;
+.ticket-free {
+    color: #e74c3c;
 }
 
-#filterControls {
-    margin-bottom: 20px;
+/* Grouped View Styles */
+.grouped-list {
+    margin-top: 1rem;
+}
+
+.group {
+    margin-bottom: 2rem;
+}
+
+.group h3 {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Navigation Styles */
+.navigation, .group-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.navigation span, .group-navigation span {
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .attraction-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .attraction-card {
+        width: 90%;
+    }
+}
+#view-all {
+    background-color: #27ae60;
+}
+
+#view-all:hover {
+    background-color: #219955;
+}
+
+.view-all-mode .attraction-list {
+    justify-content: flex-start;
+}
+
+.view-all-mode .navigation {
+    display: none;
 }
