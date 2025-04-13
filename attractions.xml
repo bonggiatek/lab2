@@ -10,7 +10,7 @@
         <Category>Religious</Category>
         <Ticket>Free</Ticket>
         <Price>0</Price>
-        <Image>batu_caves.jpg</Image>
+        <Image>https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Gombak_Selangor_Batu-Caves-01.jpg/682px-Gombak_Selangor_Batu-Caves-01.jpg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>2</PlaceID>
@@ -22,7 +22,7 @@
         <Category>Urban Landmark</Category>
         <Ticket>Yes</Ticket>
         <Price>80</Price>
-        <Image>petronas_towers.jpg</Image>
+        <Image>https://www.malaysia.travel/mt-flmngr/files/Petronas-Twin-Tower/petronas-twin-tower%20(1).jpeg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>3</PlaceID>
@@ -34,7 +34,7 @@
         <Category>Recreational</Category>
         <Ticket>Yes</Ticket>
         <Price>30</Price>
-        <Image>penang_hill.jpg</Image>
+        <Image>https://www.penanghill.gov.my/templates/yootheme/cache/habitat1-0f0f74b2.jpeg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>4</PlaceID>
@@ -46,7 +46,7 @@
         <Category>Historical</Category>
         <Ticket>Various</Ticket>
         <Price>Varies</Price>
-        <Image>melaka_city.jpg</Image>
+        <Image>https://upload.wikimedia.org/wikipedia/commons/7/79/Melaka_03.jpg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>5</PlaceID>
@@ -58,7 +58,7 @@
         <Category>Nature</Category>
         <Ticket>Various</Ticket>
         <Price>Varies</Price>
-        <Image>cameron_highlands.jpg</Image>
+        <Image>https://feastoftravel.com/wp-content/uploads/2023/06/img_0978-scaled.jpg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>6</PlaceID>
@@ -70,7 +70,7 @@
         <Category>Nature</Category>
         <Ticket>Various</Ticket>
         <Price>Varies</Price>
-        <Image>langkawi_island.jpg</Image>
+        <Image>https://www.langkawi.com/wp-content/uploads/2023/11/0baf9010-06d5-11ea-9a33-af3d9838d4d6_1573732268-large.jpg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>7</PlaceID>
@@ -82,7 +82,7 @@
         <Category>Adventure</Category>
         <Ticket>Yes</Ticket>
         <Price>Varies</Price>
-        <Image>mount_kinabalu.jpg</Image>
+        <Image>https://upload.wikimedia.org/wikipedia/commons/5/51/Gunung_Kinabalu_Sabah.jpg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>8</PlaceID>
@@ -94,7 +94,7 @@
         <Category>Cultural</Category>
         <Ticket>Yes</Ticket>
         <Price>20</Price>
-        <Image>islamic_arts_museum.jpg</Image>
+        <Image>https://upload.wikimedia.org/wikipedia/commons/8/88/Islamic_Arts_Museum_Malaysia_Exterior_%28May_2022%29_-_img_02.jpg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>9</PlaceID>
@@ -106,7 +106,7 @@
         <Category>Nature</Category>
         <Ticket>Yes</Ticket>
         <Price>Varies</Price>
-        <Image>taman_negara.jpg</Image>
+        <Image>https://www.tamannegara.asia/v3/wp-content/uploads/2017/02/Canopy5.jpg</Image>
     </Attraction>
     <Attraction>
         <PlaceID>10</PlaceID>
@@ -118,6 +118,6 @@
         <Category>Cultural</Category>
         <Ticket>Free</Ticket>
         <Price>0</Price>
-        <Image>jonker_street.jpg</Image>
+        <Image>https://onalulu.com/wp-content/uploads/2023/10/Jonker-Street-Night-Market-5.jpg</Image>
     </Attraction>
 </Attractions>
