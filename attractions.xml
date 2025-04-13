@@ -5,8 +5,8 @@
         <Name>Batu Caves</Name>
         <City>Gombak</City>
         <State>Selangor</State>
-        <Description>Limestone hill with temples and shrines.</Description>
-        <OpeningHours>07:00 - 20:00</OpeningHours>
+        <Description>Limestone hill with temples and shrines. Features a 272-step staircase to the main cave temple.</Description>
+        <OpeningHours>07:00-20:00 (Closed on weekends)</OpeningHours>
         <Category>Religious</Category>
         <Ticket>Free</Ticket>
         <Price>0</Price>
@@ -17,8 +17,8 @@
         <Name>Petronas Twin Towers</Name>
         <City>Kuala Lumpur</City>
         <State>Kuala Lumpur</State>
-        <Description>Iconic twin skyscrapers.</Description>
-        <OpeningHours>09:00 - 21:00</OpeningHours>
+        <Description>Iconic twin skyscrapers that were the tallest buildings in the world from 1998 to 2004.</Description>
+        <OpeningHours>09:00-21:00 (Closed on Mondays)</OpeningHours>
         <Category>Urban Landmark</Category>
         <Ticket>Yes</Ticket>
         <Price>80</Price>
@@ -29,8 +29,8 @@
         <Name>Penang Hill</Name>
         <City>Penang</City>
         <State>Penang</State>
-        <Description>Hill resort with scenic views.</Description>
-        <OpeningHours>06:30 - 23:00</OpeningHours>
+        <Description>Hill resort with scenic views, cool climate, and colonial bungalows. Accessible by funicular railway.</Description>
+        <OpeningHours>06:30-23:00 (Morning/Evening shifts)</OpeningHours>
         <Category>Recreational</Category>
         <Ticket>Yes</Ticket>
         <Price>30</Price>
@@ -41,7 +41,7 @@
         <Name>Melaka Historical City</Name>
         <City>Melaka</City>
         <State>Melaka</State>
-        <Description>Historical city with colonial architecture.</Description>
+        <Description>UNESCO World Heritage Site with colonial architecture from Portuguese, Dutch, and British periods.</Description>
         <OpeningHours>24 Hours</OpeningHours>
         <Category>Historical</Category>
         <Ticket>Various</Ticket>
@@ -53,8 +53,8 @@
         <Name>Cameron Highlands</Name>
         <City>Pahang</City>
         <State>Pahang</State>
-        <Description>Hill station known for tea plantations.</Description>
-        <OpeningHours>09:00 - 18:00</OpeningHours>
+        <Description>Hill station known for tea plantations, strawberry farms, and cool climate.</Description>
+        <OpeningHours>09:00-18:00 (Morning/Evening shifts)</OpeningHours>
         <Category>Nature</Category>
         <Ticket>Various</Ticket>
         <Price>Varies</Price>
@@ -65,7 +65,7 @@
         <Name>Langkawi Island</Name>
         <City>Langkawi</City>
         <State>Kedah</State>
-        <Description>Island with beaches and nature reserves.</Description>
+        <Description>Archipelago of 99 islands with beaches, nature reserves, and duty-free shopping.</Description>
         <OpeningHours>24 Hours</OpeningHours>
         <Category>Nature</Category>
         <Ticket>Various</Ticket>
@@ -77,7 +77,7 @@
         <Name>Mount Kinabalu</Name>
         <City>Ranau</City>
         <State>Sabah</State>
-        <Description>Highest mountain in Malaysia.</Description>
+        <Description>Highest mountain in Malaysia at 4,095 meters, popular for climbing and biodiversity.</Description>
         <OpeningHours>24 Hours</OpeningHours>
         <Category>Adventure</Category>
         <Ticket>Yes</Ticket>
@@ -89,8 +89,8 @@
         <Name>Islamic Arts Museum Malaysia</Name>
         <City>Kuala Lumpur</City>
         <State>Kuala Lumpur</State>
-        <Description>Museum showcasing Islamic art and culture.</Description>
-        <OpeningHours>09:30 - 18:00</OpeningHours>
+        <Description>Museum showcasing Islamic art, architecture, and culture with over 7,000 artifacts.</Description>
+        <OpeningHours>09:30-18:00 (Closed on Sundays)</OpeningHours>
         <Category>Cultural</Category>
         <Ticket>Yes</Ticket>
         <Price>20</Price>
@@ -101,7 +101,7 @@
         <Name>Taman Negara</Name>
         <City>Jerantut</City>
         <State>Pahang</State>
-        <Description>National park with rainforest and wildlife.</Description>
+        <Description>One of the world's oldest rainforests, home to diverse wildlife and canopy walkways.</Description>
         <OpeningHours>24 Hours</OpeningHours>
         <Category>Nature</Category>
         <Ticket>Yes</Ticket>
@@ -113,8 +113,8 @@
         <Name>Jonker Street</Name>
         <City>Melaka</City>
         <State>Melaka</State>
-        <Description>Famous street market in Melaka.</Description>
-        <OpeningHours>18:00 - 24:00</OpeningHours>
+        <Description>Famous street market in Melaka's Chinatown, known for antiques, food, and weekend night market.</Description>
+        <OpeningHours>18:00-24:00 (Weekends only)</OpeningHours>
         <Category>Cultural</Category>
         <Ticket>Free</Ticket>
         <Price>0</Price>
