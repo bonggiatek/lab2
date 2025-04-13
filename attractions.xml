@@ -1,83 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TouristAttractions>
+<Attractions>
     <Attraction>
-        <Name>Petronas Twin Towers</Name>
-        <City>Kuala Lumpur</City>
-        <State>Kuala Lumpur</State>
-        <Category>Urban Landmark, Entertainment</Category>
-        <Description>Iconic twin skyscrapers with a skybridge and observation deck.</Description>
-        <OpeningHours>
-            <Day>Monday-Friday</Day>
-            <Time>9:00 AM - 9:00 PM</Time>
-        </OpeningHours>
-        <OpeningHours>
-          <Day>Weekend</Day>
-          <Time>Closed</Time>
-        </OpeningHours>
-        <Image>petronas.jpg</Image>
-    </Attraction>
-    <Attraction>
+        <PlaceID>1</PlaceID>
         <Name>Batu Caves</Name>
         <City>Gombak</City>
         <State>Selangor</State>
-        <Category>Religious, Cultural</Category>
-        <Description>Limestone hill with temples and Hindu shrines.</Description>
-        <OpeningHours>
-            <Day>Daily</Day>
-            <Time>6:00 AM - 9:00 PM</Time>
-        </OpeningHours>
+        <Description>Limestone hill with temples and shrines.</Description>
+        <OpeningHours>07:00 - 20:00</OpeningHours>
+        <Category>Religious</Category>
+        <Ticket>Free</Ticket>
+        <Price>0</Price>
         <Image>batu_caves.jpg</Image>
     </Attraction>
     <Attraction>
+        <PlaceID>2</PlaceID>
+        <Name>Petronas Twin Towers</Name>
+        <City>Kuala Lumpur</City>
+        <State>Kuala Lumpur</State>
+        <Description>Iconic twin skyscrapers.</Description>
+        <OpeningHours>09:00 - 21:00</OpeningHours>
+        <Category>Urban Landmark</Category>
+        <Ticket>Yes</Ticket>
+        <Price>80</Price>
+        <Image>petronas_towers.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <PlaceID>3</PlaceID>
+        <Name>Penang Hill</Name>
+        <City>Penang</City>
+        <State>Penang</State>
+        <Description>Hill resort with scenic views.</Description>
+        <OpeningHours>06:30 - 23:00</OpeningHours>
+        <Category>Recreational</Category>
+        <Ticket>Yes</Ticket>
+        <Price>30</Price>
+        <Image>penang_hill.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <PlaceID>4</PlaceID>
+        <Name>Melaka Historical City</Name>
+        <City>Melaka</City>
+        <State>Melaka</State>
+        <Description>Historical city with colonial architecture.</Description>
+        <OpeningHours>24 Hours</OpeningHours>
+        <Category>Historical</Category>
+        <Ticket>Various</Ticket>
+        <Price>Varies</Price>
+        <Image>melaka_city.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <PlaceID>5</PlaceID>
         <Name>Cameron Highlands</Name>
-        <City>Cameron Highlands</City>
+        <City>Pahang</City>
         <State>Pahang</State>
-        <Category>Nature, Recreational</Category>
-        <Description>Hill station known for tea plantations and cool climate.</Description>
-        <OpeningHours>
-            <Day>Daily</Day>
-            <Time>24 Hours</Time>
-        </OpeningHours>
+        <Description>Hill station known for tea plantations.</Description>
+        <OpeningHours>09:00 - 18:00</OpeningHours>
+        <Category>Nature</Category>
+        <Ticket>Various</Ticket>
+        <Price>Varies</Price>
         <Image>cameron_highlands.jpg</Image>
     </Attraction>
     <Attraction>
-        <Name>Fort Cornwallis</Name>
-        <City>George Town</City>
-        <State>Penang</State>
-        <Category>Historical</Category>
-        <Description>Star fort built by the British East India Company.</Description>
-        <OpeningHours>
-            <Day>Daily</Day>
-            <Time>9:00 AM - 10:00 PM</Time>
-        </OpeningHours>
-        <Image>fort_cornwallis.jpg</Image>
+        <PlaceID>6</PlaceID>
+        <Name>Langkawi Island</Name>
+        <City>Langkawi</City>
+        <State>Kedah</State>
+        <Description>Island with beaches and nature reserves.</Description>
+        <OpeningHours>24 Hours</OpeningHours>
+        <Category>Nature</Category>
+        <Ticket>Various</Ticket>
+        <Price>Varies</Price>
+        <Image>langkawi_island.jpg</Image>
     </Attraction>
     <Attraction>
-        <Name>Kinabalu National Park</Name>
+        <PlaceID>7</PlaceID>
+        <Name>Mount Kinabalu</Name>
         <City>Ranau</City>
         <State>Sabah</State>
-        <Category>Nature, Adventure</Category>
-        <Description>Home to Mount Kinabalu, a UNESCO World Heritage Site.</Description>
-        <OpeningHours>
-          <Day>Daily</Day>
-          <Time>24 Hours</Time>
-        </OpeningHours>
-        <Image>kinabalu.jpg</Image>
+        <Description>Highest mountain in Malaysia.</Description>
+        <OpeningHours>24 Hours</OpeningHours>
+        <Category>Adventure</Category>
+        <Ticket>Yes</Ticket>
+        <Price>Varies</Price>
+        <Image>mount_kinabalu.jpg</Image>
     </Attraction>
     <Attraction>
-      <Name>Jonker Street</Name>
-      <City>Melaka</City>
-      <State>Melaka</State>
-      <Category>Cultural, Entertainment</Category>
-      <Description>Historic street known for antique shops and night market.</Description>
-      <OpeningHours>
-        <Day>Friday-Sunday</Day>
-        <Time>6:00 PM - 12:00 AM</Time>
-      </OpeningHours>
-      <OpeningHours>
-          <Day>Monday-Thursday</Day>
-          <Time>10:00 AM - 6:00 PM</Time>
-      </OpeningHours>
-      <Image>jonker.jpg</Image>
+        <PlaceID>8</PlaceID>
+        <Name>Islamic Arts Museum Malaysia</Name>
+        <City>Kuala Lumpur</City>
+        <State>Kuala Lumpur</State>
+        <Description>Museum showcasing Islamic art and culture.</Description>
+        <OpeningHours>09:30 - 18:00</OpeningHours>
+        <Category>Cultural</Category>
+        <Ticket>Yes</Ticket>
+        <Price>20</Price>
+        <Image>islamic_arts_museum.jpg</Image>
     </Attraction>
-</TouristAttractions>
+    <Attraction>
+        <PlaceID>9</PlaceID>
+        <Name>Taman Negara</Name>
+        <City>Jerantut</City>
+        <State>Pahang</State>
+        <Description>National park with rainforest and wildlife.</Description>
+        <OpeningHours>24 Hours</OpeningHours>
+        <Category>Nature</Category>
+        <Ticket>Yes</Ticket>
+        <Price>Varies</Price>
+        <Image>taman_negara.jpg</Image>
+    </Attraction>
+    <Attraction>
+        <PlaceID>10</PlaceID>
+        <Name>Jonker Street</Name>
+        <City>Melaka</City>
+        <State>Melaka</State>
+        <Description>Famous street market in Melaka.</Description>
+        <OpeningHours>18:00 - 24:00</OpeningHours>
+        <Category>Cultural</Category>
+        <Ticket>Free</Ticket>
+        <Price>0</Price>
+        <Image>jonker_street.jpg</Image>
+    </Attraction>
+</Attraction
