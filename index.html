@@ -3,116 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourist Attraction Directory</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f8ff; /* Light blue background */
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            color: #008080; /* Teal heading color */
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        #attractionList {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .attraction-item {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.3s ease-in-out;
-            border: 1px solid #e0e0e0;
-        }
-
-        .attraction-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .attraction-item h2 {
-            color: #4682b4; /* Steel blue title color */
-            margin-bottom: 10px;
-        }
-
-        .attraction-item p {
-            line-height: 1.6;
-        }
-
-        #navigation {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        #prev, #next {
-            background-color: #ffa07a; /* Light salmon button color */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            margin: 0 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #prev:hover, #next:hover {
-            background-color: #fa8072; /* Salmon hover color */
-        }
-
-        #recordCount {
-            margin: 0 10px;
-            line-height: 2.5;
-        }
-
-        /* Light Theme (default) */
-        .light-theme {
-            background-color: #f0f8ff;
-            color: #333;
-        }
-
-        /* Dark Theme (if you add a theme toggle) */
-        .dark-theme {
-            background-color: #222;
-            color: #eee;
-        }
-
-        .dark-theme h1, .dark-theme .attraction-item h2 {
-            color: #87ceeb; /* Light sky blue dark theme heading*/
-        }
-
-        .dark-theme .attraction-item {
-            background-color: #333;
-            border: 1px solid #555;
-        }
-
-        .dark-theme #prev, .dark-theme #next {
-            background-color: #555;
-        }
-
-        .dark-theme #prev:hover, .dark-theme #next:hover{
-            background-color: #777;
-        }
-    </style>
+    <title>Malaysia Tourist Attractions Directory1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-theme">
-    <h1>Tourist Attraction Directory</h1>
-    <div id="attractionList"></div>
-    <div id="navigation">
-        <button id="prev">Previous</button>
-        <button id="next">Next</button>
-        <span id="recordCount"></span>
-    </div>
+<body>
+    <header>
+        <h1>Malaysia Tourist Attractions Directory</h1>
+		<div class="view-controls">
+			<button id="simple-view">Simple View</button>
+			<button id="detailed-view">Detailed View</button>
+			<button id="grouped-view">Grouped View</button>
+			<button id="view-all">View All</button>
+		</div>
+        <div class="group-controls" id="group-controls">
+            <label for="group-by">Group by:</label>
+            <select id="group-by">
+                <option value="state">State</option>
+                <option value="city">City</option>
+                <option value="category">Category</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <div id="simple-container" class="view-container">
+            <h2>All Attractions (Simple View)</h2>
+            <div id="simple-attractions" class="attraction-list"></div>
+            <div class="navigation">
+                <button id="prev-simple">Previous</button>
+                <span id="simple-counter">1/10</span>
+                <button id="next-simple">Next</button>
+							 <!-- New button -->
+            </div>
+        </div>
+
+        <div id="detailed-container" class="view-container" style="display: none;">
+            <h2>All Attractions (Detailed View)</h2>
+            <div id="detailed-attractions" class="attraction-list"></div>
+            <div class="navigation">
+                <button id="prev-detailed">Previous</button>
+                <span id="detailed-counter">1/10</span>
+                <button id="next-detailed">Next</button>
+            </div>
+        </div>
+
+        <div id="grouped-container" class="view-container" style="display: none;">
+            <h2>Grouped Attractions</h2>
+            <div id="grouped-attractions" class="grouped-list"></div>
+            <div class="group-navigation">
+                <button id="prev-group">Previous Group</button>
+                <span id="group-counter">1/1</span>
+                <button id="next-group">Next Group</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>TMS6124 Web Authoring - Lab Assignment</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
