@@ -1,32 +1,20 @@
+/* style.css */
 body {
     font-family: sans-serif;
-    margin: 20px;
+    padding: 20px;
 }
 
 .attraction {
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
+    border: 1px solid #ccc;
     padding: 10px;
-    display: flex;
+    margin-bottom: 10px;
 }
 
-.attraction img {
-    max-width: 200px;
-    margin-right: 20px;
+.attraction-name {
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-.attraction-details {
-    flex-grow: 1;
-}
-
-.attraction h2 {
-    margin-top: 0;
-}
-
-.opening-hours {
-  margin-top: 10px;
-}
-
-.opening-hours p{
-  margin: 0;
+#navigation {
+    margin-top: 20px;
 }
