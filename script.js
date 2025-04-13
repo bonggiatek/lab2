@@ -1,3 +1,4 @@
+// script.js
 window.onload = function() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "attractions.xml", true);
@@ -33,7 +34,7 @@ window.onload = function() {
                         "<div class='attraction-category'>Category: " + category + "</div>" +
                         "<div class='attraction-ticket'>Ticket: " + ticket + "</div>" +
                         "<div class='attraction-price'>Price: " + price + "</div>" +
-                        "<div class='attraction-image'>Image: " + image + "</div>" +
+                        "<div class='attraction-image'><img src='" + image + "' alt='" + name + "'></div>" +
                         "</div>";
                 }
                 document.getElementById("attractionList").innerHTML = output;
