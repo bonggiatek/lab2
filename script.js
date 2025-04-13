@@ -9,7 +9,7 @@ window.onload = function() {
             var output = "";
             var currentIndex = 0;
             var attractionsPerPage = 1;
-            var filteredAttractions = [];
+            var filteredAttractions = Array.from(attractions); // Initialize with all attractions
 
             function displayAttractions(attractionsToDisplay) {
                 output = "";
@@ -43,7 +43,7 @@ window.onload = function() {
             function filterAttractions(filterType, filterValue) {
                 filteredAttractions = Array.from(attractions).filter(function(attraction) {
                     var value = attraction.getElementsByTagName(filterType)[0].childNodes[0].nodeValue;
-                    return value === filterValue;
+                    return value.toLowerCase() === filterValue.toLowerCase(); // Case-insensitive filter
                 });
                 currentIndex = 0;
                 displayAttractions(filteredAttractions.slice(currentIndex, currentIndex + attractionsPerPage));
@@ -55,13 +55,45 @@ window.onload = function() {
                 displayAttractions(filteredAttractions.slice(currentIndex, currentIndex + attractionsPerPage));
             }
 
+            function showOneAttraction(placeID) {
+                let attraction = filteredAttractions.find(attraction => attraction.getElementsByTagName("PlaceID")[0].childNodes[0].nodeValue == placeID);
+                if (attraction) {
+                    displayAttractions([attraction]);
+                } else {
+                    document.getElementById("attractionList").innerHTML = "Attraction not found";
+                }
+            }
+
+            function updateRecordCount() {
+                document.getElementById("recordCount").innerHTML = (currentIndex + 1) + " to " + Math.min(currentIndex + attractionsPerPage, filteredAttractions.length) + " of " + filteredAttractions.length;
+            }
+
             function updateNavigationButtons() {
                 var prevButton = document.getElementById("prev");
                 var nextButton = document.getElementById("next");
 
                 prevButton.disabled = currentIndex === 0;
                 nextButton.disabled = currentIndex + attractionsPerPage >= filteredAttractions.length;
+                updateRecordCount();
             }
+
+            // Event Listeners
+            document.getElementById("filterButton").addEventListener("click", function() {
+                var filterType = document.getElementById("filterType").value;
+                var filterValue = document.getElementById("filterValue").value;
+                filterAttractions(filterType, filterValue);
+                updateNavigationButtons();
+            });
+
+            document.getElementById("showAllButton").addEventListener("click", function() {
+                showAllAttractions();
+                updateNavigationButtons();
+            });
+
+            document.getElementById("showOneButton").addEventListener("click", function() {
+                let placeID = document.getElementById("placeIDValue").value;
+                showOneAttraction(placeID);
+            });
 
             document.getElementById("prev").addEventListener("click", function() {
                 currentIndex -= attractionsPerPage;
@@ -75,12 +107,18 @@ window.onload = function() {
                 updateNavigationButtons();
             });
 
+            // Theme Toggle Functionality
+            const themeToggle = document.getElementById("themeToggle");
+            const body = document.body;
+
+            themeToggle.addEventListener("click", () => {
+                body.classList.toggle("dark-theme");
+                body.classList.toggle("light-theme");
+            });
+
             // Initial display and navigation setup
             showAllAttractions();
             updateNavigationButtons();
-
-            // Example of filtering by state (you can add more filter buttons)
-            //filterAttractions("State", "Selangor"); // Example filter.
 
         }
     };
