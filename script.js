@@ -1,82 +1,87 @@
-// script.js
-alert();
-// Hardcoded XML string (replace with your actual XML)
-const xmlString = `
-<?xml version="1.0" encoding="UTF-8"?>
-<TouristAttractions>
-    <Attraction>
-        <Name>Petronas Twin Towers</Name>
-        <City>Kuala Lumpur</City>
-        <State>Kuala Lumpur</State>
-        <Category>Urban Landmark, Entertainment</Category>
-        <Description>Iconic twin skyscrapers with a skybridge and observation deck.</Description>
-        <OpeningHours>
-            <Day>Monday-Friday</Day>
-            <Time>9:00 AM - 9:00 PM</Time>
-        </OpeningHours>
-        <OpeningHours>
-          <Day>Weekend</Day>
-          <Time>Closed</Time>
-        </OpeningHours>
-        <Image>petronas.jpg</Image>
-    </Attraction>
-    <Attraction>
-        <Name>Batu Caves</Name>
-        <City>Gombak</City>
-        <State>Selangor</State>
-        <Category>Religious, Cultural</Category>
-        <Description>Limestone hill with temples and Hindu shrines.</Description>
-        <OpeningHours>
-            <Day>Daily</Day>
-            <Time>6:00 AM - 9:00 PM</Time>
-        </Opening Hours>
-        <Image>batu_caves.jpg</Image>
-    </Att{Attraction>
-</TouristAttractions>
-`; // Example XML
+window.onload = function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "attractions.xml", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var xmlDoc = xhr.responseXML;
+            var attractions = xmlDoc.getElementsByTagName("Attraction");
+            var output = "";
+            var currentIndex = 0;
+            var attractionsPerPage = 1;
+            var filteredAttractions = [];
 
-const parser = new DOMParser();
-const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
-const attractions = xmlDoc.getElementsByTagName('Attraction');
-const attractionsDiv = document.getElementById('attractions');
-alert(attractions);
-for (let i = 0; i < attractions.length; i++) {
-    const attraction = attractions[i];
-    const name = attraction.getElementsByTagName('Name')[0].textContent;
-    const city = attraction.getElementsByTagName('City')[0].textContent;
-    const state = attraction.getElementsByTagName('State')[0].textContent;
-    const category = attraction.getElementsByTagName('Category')[0].textContent;
-    const description = attraction.getElementsByTagName('Description')[0].textContent;
-    const image = attraction.getElementsByTagName('Image')[0].textContent;
-    const openingHoursElements = attraction.getElementsByTagName('OpeningHours');
+            function displayAttractions(attractionsToDisplay) {
+                output = "";
+                for (var i = 0; i < attractionsToDisplay.length; i++) {
+                    var placeId = attractionsToDisplay[i].getElementsByTagName("PlaceID")[0].childNodes[0].nodeValue;
+                    var name = attractionsToDisplay[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue;
+                    var city = attractionsToDisplay[i].getElementsByTagName("City")[0].childNodes[0].nodeValue;
+                    var state = attractionsToDisplay[i].getElementsByTagName("State")[0].childNodes[0].nodeValue;
+                    var description = attractionsToDisplay[i].getElementsByTagName("Description")[0].childNodes[0].nodeValue;
+                    var openingHours = attractionsToDisplay[i].getElementsByTagName("OpeningHours")[0].childNodes[0].nodeValue;
+                    var category = attractionsToDisplay[i].getElementsByTagName("Category")[0].childNodes[0].nodeValue;
+                    var ticket = attractionsToDisplay[i].getElementsByTagName("Ticket")[0].childNodes[0].nodeValue;
+                    var price = attractionsToDisplay[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue;
+                    var image = attractionsToDisplay[i].getElementsByTagName("Image")[0].childNodes[0].nodeValue;
 
-    const attractionDiv = document.createElement('div');
-    attractionDiv.classList.add('attraction');
+                    output += "<div class='attraction'>" +
+                        "<div class='attraction-name'>Name: " + name + " (PlaceID: " + placeId + ")</div>" +
+                        "<div class='attraction-city'>City: " + city + "</div>" +
+                        "<div class='attraction-state'>State: " + state + "</div>" +
+                        "<div class='attraction-description'>Description: " + description + "</div>" +
+                        "<div class='attraction-openingHours'>Opening Hours: " + openingHours + "</div>" +
+                        "<div class='attraction-category'>Category: " + category + "</div>" +
+                        "<div class='attraction-ticket'>Ticket: " + ticket + "</div>" +
+                        "<div class='attraction-price'>Price: " + price + "</div>" +
+                        "<div class='attraction-image'>Image: " + image + "</div>" +
+                        "</div>";
+                }
+                document.getElementById("attractionList").innerHTML = output;
+            }
 
-    const imageElement = document.createElement('img');
-    imageElement.src = image; // Ensure correct image paths
-    attractionDiv.appendChild(imageElement);
+            function filterAttractions(filterType, filterValue) {
+                filteredAttractions = Array.from(attractions).filter(function(attraction) {
+                    var value = attraction.getElementsByTagName(filterType)[0].childNodes[0].nodeValue;
+                    return value === filterValue;
+                });
+                currentIndex = 0;
+                displayAttractions(filteredAttractions.slice(currentIndex, currentIndex + attractionsPerPage));
+            }
 
-    const detailsDiv = document.createElement('div');
-    detailsDiv.classList.add('attraction-details');
+            function showAllAttractions() {
+                filteredAttractions = Array.from(attractions);
+                currentIndex = 0;
+                displayAttractions(filteredAttractions.slice(currentIndex, currentIndex + attractionsPerPage));
+            }
 
-    detailsDiv.innerHTML = `
-        <h2>${name}</h2>
-        <p><strong>City:</strong> ${city}, ${state}</p>
-        <p><strong>Category:</strong> ${category}</p>
-        <p><strong>Description:</strong> ${description}</p>
-    `;
+            function updateNavigationButtons() {
+                var prevButton = document.getElementById("prev");
+                var nextButton = document.getElementById("next");
 
-    const openingHoursDiv = document.createElement('div');
-    openingHoursDiv.classList.add('opening-hours');
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex + attractionsPerPage >= filteredAttractions.length;
+            }
 
-    for(let j=0; j < openingHoursElements.length; j++){
-      const day = openingHoursElements[j].getElementsByTagName('Day')[0].textContent;
-      const time = openingHoursElements[j].getElementsByTagName('Time')[0].textContent;
-      openingHoursDiv.innerHTML += `<p><strong>${day}:</strong> ${time}</p>`;
-    }
+            document.getElementById("prev").addEventListener("click", function() {
+                currentIndex -= attractionsPerPage;
+                displayAttractions(filteredAttractions.slice(currentIndex, currentIndex + attractionsPerPage));
+                updateNavigationButtons();
+            });
 
-    detailsDiv.appendChild(openingHoursDiv);
-    attractionDiv.appendChild(detailsDiv);
-    attractionsDiv.appendChild(attractionDiv);
-}
+            document.getElementById("next").addEventListener("click", function() {
+                currentIndex += attractionsPerPage;
+                displayAttractions(filteredAttractions.slice(currentIndex, currentIndex + attractionsPerPage));
+                updateNavigationButtons();
+            });
+
+            // Initial display and navigation setup
+            showAllAttractions();
+            updateNavigationButtons();
+
+            // Example of filtering by state (you can add more filter buttons)
+            //filterAttractions("State", "Selangor"); // Example filter.
+
+        }
+    };
+    xhr.send();
+};
