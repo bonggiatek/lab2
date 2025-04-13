@@ -6,12 +6,27 @@
     <title>Tourist Attraction Directory</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-theme">
     <h1>Tourist Attraction Directory</h1>
+    <button id="themeToggle">Toggle Theme</button>
+    <div id="filterControls">
+        <label for="filterType">Filter By:</label>
+        <select id="filterType">
+            <option value="State">State</option>
+            <option value="City">City</option>
+            <option value="Category">Category</option>
+        </select>
+        <input type="text" id="filterValue" placeholder="Enter filter value">
+        <button id="filterButton">Filter</button>
+        <button id="showAllButton">Show All</button>
+        <button id="showOneButton">Show one by PlaceID</button>
+        <input type="number" id="placeIDValue" placeholder="Enter PlaceID">
+    </div>
     <div id="attractionList"></div>
     <div id="navigation">
         <button id="prev">Previous</button>
         <button id="next">Next</button>
+        <span id="recordCount"></span>
     </div>
 
     <script src="script.js"></script>
