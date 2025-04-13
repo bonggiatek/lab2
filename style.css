@@ -2,12 +2,30 @@
 body {
     font-family: sans-serif;
     padding: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth theme transitions */
+}
+
+.light-theme {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f8f8f8;
 }
 
 .attraction {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.attraction-image img {
+    max-width: 100%; /* Responsive image size */
+    height: auto;
+    max-height: 200px; /*added max height so images wont become too large*/
+    object-fit: contain; /*Preserves aspect ratio and fits image within container*/
 }
 
 .attraction-name {
@@ -17,4 +35,8 @@ body {
 
 #navigation {
     margin-top: 20px;
+}
+
+#filterControls {
+    margin-bottom: 20px;
 }
